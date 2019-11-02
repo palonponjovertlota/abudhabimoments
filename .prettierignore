@@ -1,0 +1,6 @@
+/out
+/.next
+stylelint.config.js
+postcss.config.js
+.eslintrc
+.prettierrc
