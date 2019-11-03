@@ -1,0 +1,27 @@
+name: Actions
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Build-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run production build
+        run: npm run export
+
+      - name: Publish to Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_API_ID }}
+        with:
+          args: deploy
