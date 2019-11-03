@@ -1,21 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from 'components/Layout'
+import { withTranslation } from 'i18n'
 
-const url = 'https://abudhabimoments.ae'
+const Home = ({ t }) => <Layout>{t('title')}</Layout>
 
-const Home = () => (
-  <Layout>
-    <div className="tw-flex tw-justify-center tw-items-center tw-h-screen">
-      <a
-        className="tw-text-gray-700 hover:tw-text-gray-900"
-        href={url}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        {url}
-      </a>
-    </div>
-  </Layout>
-)
+Home.getInitialProps = () => ({
+  namespacesRequired: ['home']
+})
 
-export default Home
+Home.propTypes = {
+  t: PropTypes.func
+}
+
+export default withTranslation('home')(Home)

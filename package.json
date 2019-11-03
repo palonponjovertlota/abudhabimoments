@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "export": "npm run build && next export",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "format": "./node_modules/.bin/prettier --write \"{components,pages,styles}/**/*{.js,.jsx,.css}\""
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "express": "^4.17.1",
     "next": "9.1.2",
+    "next-i18next": "^2.0.0",
     "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0"

@@ -1,8 +1,9 @@
 import React from 'react'
 import Next from 'next/app'
 import 'styles/app.css'
+import { appWithTranslation } from 'i18n'
 
-export default class App extends Next {
+class App extends Next {
   render() {
     const { Component, pageProps } = this.props
 
@@ -163,3 +164,5 @@ export default class App extends Next {
     )
   }
 }
+
+export default appWithTranslation(App)
