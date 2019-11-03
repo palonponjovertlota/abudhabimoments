@@ -1,45 +1,45 @@
 import React from 'react'
 import NextApp from 'next/app'
 import { appWithTranslation, i18n } from 'i18n'
-import { LocaleProvider } from 'contexts/LocaleContext'
+import { LanguageProvider } from 'contexts/LanguageContext'
 import 'styles/app.css'
 
 class App extends NextApp {
   constructor(props) {
     super(props)
     this.state = {
-      locale: 'en'
+      language: 'en'
     }
   }
 
-  handleSetLocale(locale) {
-    i18n.changeLanguage(locale)
+  handleSetLanguage(language) {
+    i18n.changeLanguage(language)
 
-    this.setState({ locale })
+    this.setState({ language })
 
     const el = document.querySelector('html')
 
     if (el) {
-      el.setAttribute('lang', locale)
-      el.setAttribute('dir', locale === 'ar' ? 'rtl' : 'ltr')
+      el.setAttribute('lang', language)
+      el.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr')
     }
   }
 
   componentDidUpdate() {
-    if (this.state.locale === i18n.language) {
+    if (this.state.language === i18n.language) {
       return
     }
 
-    this.setState({ locale: i18n.language })
+    this.setState({ language: i18n.language })
   }
 
   componentDidMount() {
-    this.setState({ locale: i18n.language })
+    this.setState({ language: i18n.language })
   }
 
   render() {
     const { Component, pageProps } = this.props
-    const { locale } = this.state
+    const { language } = this.state
 
     return (
       <>
@@ -193,13 +193,13 @@ class App extends NextApp {
           }
         `}</style>
 
-        <LocaleProvider
-          locale={locale}
-          setLocale={newLocale => this.handleSetLocale(newLocale)}
-          isRtl={locale === 'ar'}
+        <LanguageProvider
+          language={language}
+          setLanguage={newLanguage => this.handleSetLanguage(newLanguage)}
+          isRtl={language === 'ar'}
         >
           <Component {...pageProps} />
-        </LocaleProvider>
+        </LanguageProvider>
       </>
     )
   }

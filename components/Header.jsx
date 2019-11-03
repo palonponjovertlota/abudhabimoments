@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
-import { LocaleContext } from 'contexts/LocaleContext'
+import { LanguageContext } from 'contexts/LanguageContext'
 import 'styles/header.css'
 
-const locales = [
+const languages = [
   {
     label: 'AR',
     name: 'ar'
@@ -15,15 +15,15 @@ const locales = [
 ]
 
 function Header() {
-  const { locale, setLocale, isRtl } = useContext(LocaleContext)
+  const { language, setLanguage, isRtl } = useContext(LanguageContext)
   const navItems = [
     <div
       key={0}
       className="tw-mx-3 md:tw-mx-6 tw-border tw-border-white tw-rounded-full tw-text-white tw-cursor-pointer lang-switch"
-      onClick={() => setLocale(locale === 'en' ? 'ar' : 'en')}
+      onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
     >
-      {locales.map((l, key) => (
-        <span className={locale === l.name ? 'active' : ''} key={key}>
+      {languages.map((l, key) => (
+        <span className={language === l.name ? 'active' : ''} key={key}>
           {l.label}
         </span>
       ))}
@@ -49,7 +49,11 @@ function Header() {
       <div className="tw-flex tw-items-center tw-justify-between md:tw-justify-center tw-p-6 md:tw-px-12 md:tw-py-4 tw-bg-gray">
         <Link href="/">
           <a aria-current="page">
-            <img className="logo" src={`/png/logo_${locale}.png`} alt="Logo" />
+            <img
+              className="logo"
+              src={`/png/logo_${language}.png`}
+              alt="Logo"
+            />
           </a>
         </Link>
 
