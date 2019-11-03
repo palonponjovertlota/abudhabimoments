@@ -1,0 +1,37 @@
+.logo {
+  width: 140px;
+}
+
+nav .lang-switch,
+nav .lang-switch span {
+  @apply .tw-inline-block .tw-relative;
+}
+
+nav .lang-switch {
+  padding: 2px;
+}
+
+nav .lang-switch span {
+  @apply .tw-w-6 .tw-h-6 .text-center .tw-font-hairline .tw-text-xs;
+  line-height: 2.25;
+}
+
+nav .lang-switch .active {
+  @apply .tw-bg-white .tw-text-black .tw-rounded-full;
+}
+
+nav .profile {
+  line-height: 0.8;
+  vertical-align: middle;
+}
+
+@screen md {
+  .logo {
+    width: 160px;
+  }
+
+  nav .lang-switch span {
+    @apply .tw-w-8 .tw-h-8;
+    line-height: 2.5;
+  }
+}

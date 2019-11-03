@@ -1,7 +1,12 @@
 module.exports = {
   prefix: 'tw-',
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        gray: '#3D3D3D',
+        'gray-light': '#565759'
+      }
+    }
   },
   variants: {
     backgroundImage: ['hover'],
