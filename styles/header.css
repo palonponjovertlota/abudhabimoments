@@ -9,6 +9,7 @@ nav .lang-switch span {
 
 nav .lang-switch {
   padding: 2px;
+  direction: ltr;
 }
 
 nav .lang-switch span {

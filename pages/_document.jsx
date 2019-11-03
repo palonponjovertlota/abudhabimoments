@@ -8,8 +8,13 @@ class Document extends NextDocument {
   }
 
   render() {
+    const { initialLanguage } = this.props.__NEXT_DATA__.props
+
     return (
-      <Html>
+      <Html
+        lang={initialLanguage}
+        dir={initialLanguage === 'ar' ? 'rtl' : 'ltr'}
+      >
         <Head />
         <body>
           <Main />

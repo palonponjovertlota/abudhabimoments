@@ -5,9 +5,11 @@ import { withTranslation } from 'i18n'
 
 const Home = ({ t }) => <Layout>{t('title')}</Layout>
 
-Home.getInitialProps = () => ({
-  namespacesRequired: ['home']
-})
+Home.getInitialProps = async () => {
+  return {
+    namespacesRequired: ['home']
+  }
+}
 
 Home.propTypes = {
   t: PropTypes.func

@@ -1,11 +1,45 @@
 import React from 'react'
-import Next from 'next/app'
+import NextApp from 'next/app'
+import { appWithTranslation, i18n } from 'i18n'
+import { LocaleProvider } from 'contexts/LocaleContext'
 import 'styles/app.css'
-import { appWithTranslation } from 'i18n'
 
-class App extends Next {
+class App extends NextApp {
+  constructor(props) {
+    super(props)
+    this.state = {
+      locale: 'en'
+    }
+  }
+
+  handleSetLocale(locale) {
+    i18n.changeLanguage(locale)
+
+    this.setState({ locale })
+
+    const el = document.querySelector('html')
+
+    if (el) {
+      el.setAttribute('lang', locale)
+      el.setAttribute('dir', locale === 'ar' ? 'rtl' : 'ltr')
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.state.locale === i18n.language) {
+      return
+    }
+
+    this.setState({ locale: i18n.language })
+  }
+
+  componentDidMount() {
+    this.setState({ locale: i18n.language })
+  }
+
   render() {
     const { Component, pageProps } = this.props
+    const { locale } = this.state
 
     return (
       <>
@@ -159,7 +193,13 @@ class App extends Next {
           }
         `}</style>
 
-        <Component {...pageProps} />
+        <LocaleProvider
+          locale={locale}
+          setLocale={newLocale => this.handleSetLocale(newLocale)}
+          isRtl={locale === 'ar'}
+        >
+          <Component {...pageProps} />
+        </LocaleProvider>
       </>
     )
   }
