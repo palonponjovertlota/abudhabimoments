@@ -1,0 +1,62 @@
+.patterns {
+  @apply tw-text-3xl;
+}
+
+.patterns .pattern {
+  @apply tw-absolute tw-bg-no-repeat;
+  background-image: url('/png/sprite_patterns_home.png');
+  background-size: 100%;
+}
+
+.patterns .pattern:before {
+  @apply tw-block;
+  content: '';
+}
+
+.patterns .pattern:first-child {
+  @apply tw-top-0 tw-right-0 tw-w-32;
+}
+
+.patterns .pattern:first-child:before {
+  padding-bottom: 119%;
+}
+
+.patterns .pattern:last-child {
+  @apply tw-bottom-0 tw-left-0 tw-w-24;
+  background-position: right 21.1%;
+}
+
+.patterns .pattern:last-child:before {
+  padding-bottom: 115%;
+}
+
+.home-wrap {
+  max-width: 580px;
+}
+
+.home-wrap .content .heading:before,
+.home-wrap .content .heading:after {
+  @apply tw-absolute tw-bg-white tw-w-10 tw-h-1;
+  content: '';
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.home-wrap .content .heading:before {
+  @apply tw-top-0;
+}
+
+@screen md {
+  .patterns .pattern:first-child {
+    @apply tw-w-64;
+  }
+
+  .patterns .pattern:last-child {
+    @apply tw-w-56;
+  }
+
+  .home-wrap {
+    width: 580px;
+  }
+}

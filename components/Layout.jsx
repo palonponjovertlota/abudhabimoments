@@ -4,7 +4,7 @@ import Header from 'components/Header'
 
 function Layout({ children, ...props }) {
   return (
-    <div>
+    <div className="tw-flex tw-flex-col tw-min-h-screen">
       <Header {...props} />
 
       {children}
