@@ -18,10 +18,23 @@ jobs:
       - name: Run production build
         run: npm run export
 
-      - name: Publish to Netlify
-        uses: netlify/actions/cli@master
+      - name: Login to Heroku
+        uses: actions/heroku@master
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_API_ID }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         with:
-          args: deploy
+          args: container:login
+
+      - name: Push to Heroku
+        uses: actions/heroku@master
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        with:
+          args: container:push -a abudhabimoments web
+
+      - name: Release from Heroku
+        uses: actions/heroku@master
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        with:
+          args: container:release -a abudhabimoments web
