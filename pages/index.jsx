@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 import Layout from 'components/Layout'
 import { withTranslation } from 'i18n'
 import 'styles/home.css'
@@ -35,6 +36,13 @@ const Home = ({ t }) => (
             />
           </div>
         </div>
+
+        <Link href="/events">
+          <a className="expand">
+            <i className="arrow"></i>
+            {t('expandText')}
+          </a>
+        </Link>
       </div>
     </div>
   </Layout>

@@ -3,14 +3,12 @@
 }
 
 .patterns .pattern {
-  @apply tw-absolute tw-bg-no-repeat;
+  @apply tw-absolute tw-bg-no-repeat tw-bg-full;
   background-image: url('/png/sprite_patterns_home.png');
-  background-size: 100%;
 }
 
 .patterns .pattern:before {
-  @apply tw-block;
-  content: '';
+  @apply tw-block tw-content-empty;
 }
 
 .patterns .pattern:first-child {
@@ -36,15 +34,32 @@
 
 .home-wrap .content .heading:before,
 .home-wrap .content .heading:after {
-  @apply tw-absolute tw-bg-white tw-w-10 tw-h-1;
-  content: '';
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  @apply tw-absolute tw-left-1/2 tw-bg-white tw-w-10 tw-h-1 tw--translate-x-1/2 tw-content-empty;
 }
 
 .home-wrap .content .heading:before {
   @apply tw-top-0;
+}
+
+.expand {
+  @apply tw-absolute tw-bottom-0 tw-left-1/2 tw-text-xl tw-uppercase tw-mb-4 tw--translate-x-1/2;
+}
+
+.expand .arrow {
+  @apply tw-block tw-relative tw-w-8 tw-h-6 tw-text-xl tw-text-center tw-mx-auto tw-mb-1;
+}
+
+.expand .arrow:before,
+.expand .arrow:after {
+  @apply tw-content-empty tw-h-full tw-w-px tw-bg-white tw-absolute tw-left-1/2 tw-top-0 tw-transform-b;
+}
+
+.expand .arrow:before {
+  @apply tw-rotate-45;
+}
+
+.expand .arrow:after {
+  @apply tw--rotate-45;
 }
 
 @screen md {
@@ -58,5 +73,9 @@
 
   .home-wrap {
     width: 580px;
+  }
+
+  .expand {
+    @apply tw-text-2xl;
   }
 }
