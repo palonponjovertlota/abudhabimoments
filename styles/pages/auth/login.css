@@ -1,0 +1,9 @@
+.content .form-wrap {
+  max-width: 380px;
+}
+
+@screen md {
+  .content .form-wrap {
+    width: 380px;
+  }
+}

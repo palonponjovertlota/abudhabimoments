@@ -3,7 +3,7 @@
 }
 
 .input .field {
-  @apply tw-outline-none tw-text-xl tw-bg-transparent tw-border-b-2 tw-border-gray-lightest tw-py-2;
+  @apply tw-outline-none tw-text-xl tw-bg-transparent tw-border-b-2 tw-border-gray-lightest tw-w-full tw-py-2;
 }
 
 .input .label {

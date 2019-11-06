@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Layout from 'components/Layout/Layout'
 import { withTranslation } from 'i18n'
-import './index.css'
+import Layout from 'components/Layout/Layout'
+import Pattern from 'components/Pattern/Pattern'
+import 'styles/pages/home.css'
 
 const Home = ({ t }) => (
   <Layout>
     <div className="tw-relative tw-py-16 tw-flex tw-flex-grow tw-flex-col tw-items-center tw-justify-center tw-bg-gray-light tw-text-center tw-text-white">
-      <div className="tw-absolute tw-pointer-events-none tw-w-full tw-h-full tw-left-0 tw-top-0 patterns">
-        <i className="pattern"></i>
-        <i className="pattern"></i>
-      </div>
+      <Pattern />
 
       <div className="tw-px-5 home-wrap">
         <div className="content">

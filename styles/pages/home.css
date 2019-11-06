@@ -1,33 +1,3 @@
-.patterns {
-  @apply tw-text-3xl;
-}
-
-.patterns .pattern {
-  @apply tw-absolute tw-bg-no-repeat tw-bg-full;
-  background-image: url('/png/sprite_patterns_home.png');
-}
-
-.patterns .pattern:before {
-  @apply tw-block tw-content-empty;
-}
-
-.patterns .pattern:first-child {
-  @apply tw-top-0 tw-right-0 tw-w-32;
-}
-
-.patterns .pattern:first-child:before {
-  padding-bottom: 119%;
-}
-
-.patterns .pattern:last-child {
-  @apply tw-bottom-0 tw-left-0 tw-w-24;
-  background-position: right 21.1%;
-}
-
-.patterns .pattern:last-child:before {
-  padding-bottom: 115%;
-}
-
 .home-wrap {
   max-width: 580px;
 }
