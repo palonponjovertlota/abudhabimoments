@@ -22,7 +22,8 @@ module.exports = {
       colors: {
         gray: '#3D3D3D',
         'gray-light': '#565759',
-        'gray-lightest': '#9A9A9B'
+        'gray-lightest': '#9A9A9B',
+        blue: '#218AC9'
       },
       inset: {
         '1/2': '50%'

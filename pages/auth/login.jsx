@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Button from 'components/Button/Button'
 import Input from 'components/Input/Input'
 import Layout from 'components/Layout/Layout'
 import Pattern from 'components/Pattern/Pattern'
@@ -32,8 +33,23 @@ const Login = () => (
                   </Link>
                 </div>
               }
-              containerClassName="tw-w-full"
+              containerClassName="tw-w-full tw-mb-6 md:tw-mb-16"
             />
+
+            <Button
+              type="submit"
+              variant="primary"
+              className="tw-uppercase tw-mb-4 md:tw-mb-12"
+            >
+              Sign In
+            </Button>
+
+            <p>
+              Do not have an account?
+              <Link href="/auth/register">
+                <a className="tw-text-blue"> Sign up</a>
+              </Link>
+            </p>
           </form>
         </div>
       </div>

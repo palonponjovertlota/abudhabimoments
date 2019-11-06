@@ -1,0 +1,21 @@
+.btn {
+  @apply tw-inline-block tw-px-24 tw-py-4 tw-rounded-full tw-text-white tw-text-sm tw-tracking-wide tw-font-semibold;
+}
+
+.btn-primary {
+  @apply tw-bg-blue tw-text-white;
+}
+
+.btn-primary:hover {
+  @apply tw-opacity-75;
+}
+
+.btn-text {
+  @apply tw-bg-transparent tw-text-blue;
+}
+
+@screen md {
+  .btn {
+    @apply tw-px-32 tw-py-5;
+  }
+}
