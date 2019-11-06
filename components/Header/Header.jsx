@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
 import { LanguageContext } from 'contexts/LanguageContext'
-import './header.css'
+import './Header.css'
 
 const languages = [
   {
