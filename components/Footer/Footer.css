@@ -1,0 +1,37 @@
+.tabs .tab {
+  @apply tw-flex-grow 
+    tw-text-center 
+    tw-py-1;
+}
+
+.tabs .tab span {
+  @apply tw-block 
+    tw-text-xs 
+    tw-font-semibold;
+}
+
+.tabs .tab[class*=' icon-'],
+[class^='icon-'] {
+  @apply tw-block 
+    tw-text-xl;
+}
+
+.tabs .tab.tab.tab-follow {
+  @apply tw--mt-6;
+}
+
+.tabs .tab.tab-follow .icon-follow {
+  @apply tw-flex 
+    tw-items-center 
+    tw-justify-center 
+    tw-bg-blue 
+    tw-w-12
+    tw-h-12
+    tw-p-0 
+    tw--mt-1
+    tw-text-white 
+    tw-border-4 
+    tw-border-white 
+    tw-rounded-full
+    tw-mx-auto;
+}

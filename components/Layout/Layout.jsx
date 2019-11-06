@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Header from 'components/Header/Header'
+import Footer from 'components/Footer/Footer'
 
 function Layout({ children, ...props }) {
   return (
@@ -13,6 +14,8 @@ function Layout({ children, ...props }) {
         <Header />
 
         {children}
+
+        <Footer />
       </div>
     </div>
   )
