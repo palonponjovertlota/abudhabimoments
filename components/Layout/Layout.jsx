@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Header from 'components/Header/Header'
 import Footer from 'components/Footer/Footer'
 
-function Layout({ children, ...props }) {
+function Layout({ hasFooter, children, ...props }) {
   return (
     <div className="tw-flex tw-flex-col tw-min-h-screen" {...props}>
       <div
@@ -15,13 +15,18 @@ function Layout({ children, ...props }) {
 
         {children}
 
-        <Footer />
+        {hasFooter && <Footer />}
       </div>
     </div>
   )
 }
 
+Layout.defaultProps = {
+  hasFooter: true
+}
+
 Layout.propTypes = {
+  hasFooter: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

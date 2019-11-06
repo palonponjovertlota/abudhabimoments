@@ -7,7 +7,7 @@ import Pattern from 'components/Pattern/Pattern'
 import 'styles/pages/home.css'
 
 const Home = ({ t }) => (
-  <Layout>
+  <Layout hasFooter={false}>
     <div className="tw-relative tw-py-16 tw-flex tw-flex-grow tw-flex-col tw-items-center tw-justify-center tw-bg-gray-light tw-text-center tw-text-white">
       <Pattern />
 

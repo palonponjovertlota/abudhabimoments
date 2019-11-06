@@ -4,8 +4,8 @@ import './Footer.css'
 
 const Footer = () => (
   <footer className="tw-fixed tw-w-full tw-bottom-0 tw-left-0">
-    <div className="tw-relative md:hidden">
-      <div className="tw-flex tw-flex-1 tw-justify-around tw-bg-white tw-text-gray tw-px-6 tabs">
+    <div className="tw-relative md:tw-hidden">
+      <div className="tw-flex tw-flex-1 tw-justify-around tw-bg-white tw-text-gray tabs">
         <div className="tab tab-home">
           <Link href="/">
             <a>
