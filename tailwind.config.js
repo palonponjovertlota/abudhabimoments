@@ -21,7 +21,8 @@ module.exports = {
     extend: {
       colors: {
         gray: '#3D3D3D',
-        'gray-light': '#565759'
+        'gray-light': '#565759',
+        'gray-lightest': '#9A9A9B'
       },
       inset: {
         '1/2': '50%'
@@ -29,10 +30,14 @@ module.exports = {
     }
   },
   variants: {
+    transitionProperty: ['responsive'],
+    transitionDuration: ['responsive'],
+
     rotate: ['responsive'],
     transform: ['responsive'],
     transformOrigin: ['responsive'],
     translate: ['responsive'],
+
     backgroundImage: ['hover'],
     backgroundColor: ['hover'],
     display: ['responsive', 'hover', 'focus']
@@ -50,6 +55,7 @@ module.exports = {
 
       addUtilities(newUtilities, ['responsive'])
     },
+    require('tailwindcss-transitions')(),
     require('tailwindcss-transforms')()
   ]
 }

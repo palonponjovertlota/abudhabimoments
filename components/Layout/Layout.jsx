@@ -4,13 +4,13 @@ import Header from 'components/Header/Header'
 
 function Layout({ children, ...props }) {
   return (
-    <div className="tw-flex tw-flex-col tw-min-h-screen">
+    <div className="tw-flex tw-flex-col tw-min-h-screen" {...props}>
       <div
         tabIndex={-1}
         role="group"
         className="tw-flex tw-flex-col tw-flex-grow tw-outline-none"
       >
-        <Header {...props} />
+        <Header />
 
         {children}
       </div>
