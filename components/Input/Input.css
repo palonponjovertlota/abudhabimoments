@@ -1,15 +1,30 @@
 .input {
-  @apply tw-relative tw-block tw-text-white tw-mt-4;
+  @apply tw-relative 
+    tw-block 
+    tw-text-white 
+    tw-mt-4;
 }
 
 .input .field {
-  @apply tw-outline-none tw-text-xl tw-bg-transparent tw-border-b-2 tw-border-gray-lightest tw-w-full tw-py-2;
+  @apply tw-outline-none 
+    tw-text-xl 
+    tw-bg-transparent 
+    tw-border-b-2 
+    tw-border-gray-lightest 
+    tw-w-full tw-py-2;
 }
 
 .input .label {
-  @apply tw-absolute tw-top-0 tw-pointer-events-none tw-py-3;
+  @apply tw-absolute 
+    tw-top-0 
+    tw-pointer-events-none 
+    tw-py-3;
 }
 
 .input .field:focus + .label {
-  @apply tw-opacity-50 tw-text-xs tw--translate-y-1/2 tw-transition-250 tw-transition-ease;
+  @apply tw-opacity-50 
+    tw-text-xs 
+    tw--translate-y-1/2 
+    tw-transition-250 
+    tw-transition-ease;
 }

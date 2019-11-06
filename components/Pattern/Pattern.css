@@ -4,16 +4,21 @@
 }
 
 .patterns .pattern {
-  @apply tw-absolute tw-bg-no-repeat tw-bg-full;
+  @apply tw-absolute 
+    tw-bg-no-repeat 
+    tw-bg-full;
   background-image: url('/png/sprite_patterns_home.png');
 }
 
 .patterns .pattern:before {
-  @apply tw-block tw-content-empty;
+  @apply tw-block 
+    tw-content-empty;
 }
 
 .patterns .pattern:first-child {
-  @apply tw-top-0 tw-right-0 tw-w-32;
+  @apply tw-top-0 
+    tw-right-0 
+    tw-w-32;
 }
 
 .patterns.patterns-reversed .pattern:first-child {
@@ -26,12 +31,15 @@
 }
 
 .patterns .pattern:last-child {
-  @apply tw-bottom-0 tw-left-0 tw-w-24;
+  @apply tw-bottom-0 
+    tw-left-0 
+    tw-w-24;
   background-position: right 21.1%;
 }
 
 .patterns.patterns-reversed .pattern:last-child {
-  @apply tw-left-auto tw-right-0;
+  @apply tw-left-auto 
+    tw-right-0;
   background-position: 0 65.3%;
 }
 

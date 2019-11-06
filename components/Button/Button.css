@@ -1,9 +1,17 @@
 .btn {
-  @apply tw-inline-block tw-px-24 tw-py-4 tw-rounded-full tw-text-white tw-text-sm tw-tracking-wide tw-font-semibold;
+  @apply tw-inline-block 
+    tw-px-24 
+    tw-py-4 
+    tw-rounded-full 
+    tw-text-white 
+    tw-text-sm 
+    tw-tracking-wide 
+    tw-font-semibold;
 }
 
 .btn-primary {
-  @apply tw-bg-blue tw-text-white;
+  @apply tw-bg-blue 
+    tw-text-white;
 }
 
 .btn-primary:hover {
@@ -11,11 +19,13 @@
 }
 
 .btn-text {
-  @apply tw-bg-transparent tw-text-blue;
+  @apply tw-bg-transparent 
+    tw-text-blue;
 }
 
 @screen md {
   .btn {
-    @apply tw-px-32 tw-py-5;
+    @apply tw-px-32 
+      tw-py-5;
   }
 }

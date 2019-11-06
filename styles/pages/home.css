@@ -4,7 +4,12 @@
 
 .home-wrap .content .heading:before,
 .home-wrap .content .heading:after {
-  @apply tw-absolute tw-left-1/2 tw-bg-white tw-w-10 tw-h-1 tw--translate-x-1/2 tw-content-empty;
+  @apply tw-absolute 
+    tw-left-1/2 
+    tw-bg-white 
+    tw-w-10 tw-h-1 
+    tw--translate-x-1/2 
+    tw-content-empty;
 }
 
 .home-wrap .content .heading:before {
@@ -12,16 +17,36 @@
 }
 
 .expand {
-  @apply tw-absolute tw-bottom-0 tw-left-1/2 tw-text-xl tw-uppercase tw-mb-4 tw--translate-x-1/2;
+  @apply tw-absolute 
+    tw-bottom-0 
+    tw-left-1/2 
+    tw-text-xl 
+    tw-uppercase 
+    tw-mb-4 
+    tw--translate-x-1/2;
 }
 
 .expand .arrow {
-  @apply tw-block tw-relative tw-w-8 tw-h-6 tw-text-xl tw-text-center tw-mx-auto tw-mb-1;
+  @apply tw-block 
+    tw-relative 
+    tw-w-8 
+    tw-h-6 
+    tw-text-xl 
+    tw-text-center 
+    tw-mx-auto 
+    tw-mb-1;
 }
 
 .expand .arrow:before,
 .expand .arrow:after {
-  @apply tw-content-empty tw-h-full tw-w-px tw-bg-white tw-absolute tw-left-1/2 tw-top-0 tw-transform-b;
+  @apply tw-content-empty 
+    tw-h-full 
+    tw-w-px 
+    tw-bg-white 
+    tw-absolute 
+    tw-left-1/2 
+    tw-top-0 
+    tw-transform-b;
 }
 
 .expand .arrow:before {
