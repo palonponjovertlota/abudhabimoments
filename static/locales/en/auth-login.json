@@ -1,0 +1,9 @@
+{
+  "title": "Login",
+  "emailLabel": "Your email",
+  "passwordLabel": "Your password",
+  "passwordSlot": "Forgot Password?",
+  "signUp": "Sign up",
+  "noAccountPrompt": "Do not have an account?",
+  "join": "Sign up"
+}

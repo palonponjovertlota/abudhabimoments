@@ -1,0 +1,9 @@
+{
+  "title": "تسجيل الدخول",
+  "emailLabel": "البريد الإلكتروني",
+  "passwordLabel": "كلمة السر",
+  "passwordSlot": "هل نسيت كلمة السر",
+  "signUp": "الدخول",
+  "noAccountPrompt": "ليس لديك حساب؟",
+  "join": "أنشئ حساب الآن"
+}

@@ -7,7 +7,7 @@
 }
 
 .input .label {
-  @apply tw-absolute tw-left-0 tw-top-0 tw-pointer-events-none tw-py-3;
+  @apply tw-absolute tw-top-0 tw-pointer-events-none tw-py-3;
 }
 
 .input .field:focus + .label {
